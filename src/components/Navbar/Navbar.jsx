@@ -35,7 +35,7 @@ const Navbar = () =>{
     const [open, setOpen] = useState(false);
   return (
     <>
-<nav>
+<nav className='bg-gradient-to-b from-primary/25 to-transparent'>
     <motion.div  
     initial={{opacity:1}}
     visible={{opacity:0}}
@@ -52,7 +52,7 @@ const Navbar = () =>{
             <ul className='flex items-center gap-6 text-gray-800'>
                 {
                     NavbarMenu.map((menu)=>(
-                        <li key={menu.id} className='text-xl'>
+                        <li key={menu.id} className='text-xl text-amber-950'>
                             <a href={menu.link} className='inline-block py-1 px-3 hover:text-primary hover:shadow-[0_3px_0_-1px_#ef4444] font-semibold'>{menu.title}</a>
                         </li>
                     ))
